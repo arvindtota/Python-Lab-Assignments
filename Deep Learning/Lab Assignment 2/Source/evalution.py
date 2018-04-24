@@ -13,8 +13,8 @@ import csv
 
 # Data Parameters
 tf.flags.DEFINE_string("one", ".pycharm projects/one.txt", "one.txt")
-tf.flags.DEFINE_string("two", ".pycharm projects/one.txt", "two.txt")
-tf.flags.DEFINE_string("three", ".pycharm projects/one.txt", "three.txt")
+tf.flags.DEFINE_string("two", ".pycharm projects/two.txt", "two.txt")
+tf.flags.DEFINE_string("three", ".pycharm projects/three.txt", "three.txt")
 tf.flags.DEFINE_string("four", ".pycharm projects/four.txt", four.txt"")
 tf.flags.DEFINE_string("", "./pycharm projects/data/TestData", "TestData")
 
@@ -37,8 +37,8 @@ print("")
 
 # CHANGE THIS: Load data. Load your own data here
 if FLAGS.eval_train:
-    x_raw, y_test = data_helpers.load_data_and_labels(FLAGS.fashion_7000, FLAGS.finance_7000,
-                                                      FLAGS.law_7000, FLAGS.lifestyle_7000, FLAGS.TestData)
+    x_raw, y_test = data_helpers.load_data_and_labels(FLAGS.one, FLAGS.two,
+                                                      FLAGS.three, FLAGS.four, FLAGS.test)
     y_test = np.argmax(y_test, axis=1)
 else:
     x_raw = ["a masterpiece four years in the making", "everything is off."]
